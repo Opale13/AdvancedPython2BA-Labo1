@@ -9,7 +9,12 @@ class TestUtils(unittest.TestCase):
     def test_fact(self):
         self.assertEqual(utils.fact(5), 120)
         self.assertEqual(utils.fact(1), 1)
-    
+        try:
+            self.utils.fact(-1)
+            self.assertTrue(False)
+        except ValueError:
+            self.assertTrue(True)
+
     def test_roots(self):
         self.assertEqual(utils.roots(1,1,1), 0)
     

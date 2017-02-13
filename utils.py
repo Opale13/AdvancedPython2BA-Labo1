@@ -2,6 +2,8 @@
 # Author: Sébastien Combéfis
 # Version: February 2, 2016
 
+from math import*
+
 def fact(n):
     """Computes the factorial of a natural number.
     
@@ -9,6 +11,16 @@ def fact(n):
     Post: Returns the factorial of 'n'.
     Throws: ValueError if n < 0
     """
+    try:
+        if n > 0:
+            x = 1
+            for i in range(2, n+1):
+                x *= i
+            return x
+        else:
+            raise ValueError
+    except ValueError:
+        print("Entier négatif")
 
 def roots(a, b, c):
     """Computes the roots of the ax^2 + bx + x = 0 polynomial.
@@ -17,7 +29,15 @@ def roots(a, b, c):
     Post: Returns a tuple with zero, one or two elements corresponding
           to the roots of the ax^2 + bx + c polynomial.
     """
-    pass
+    delta = b*b - 4 * a * c
+    if delta == 0:
+        return (0)
+    if delta < 0:
+        return ()
+    if delta > 0:
+        x1 = (-b + sqrt(delta))/(2*c)
+        x2 = (-b - sqrt(delta))/(2*c)
+        return (x1,x2)
 
 def integrate(function, lower, upper):
     """Approximates the integral of a fonction between two bounds
@@ -31,6 +51,6 @@ def integrate(function, lower, upper):
     pass
 
 if __name__ == '__main__':
-    print(fact(5))
+    print(fact(-1))
     print(roots(1, 0, 1))
     print(integrate('x ** 2 - 1', -1, 1))

@@ -9,14 +9,10 @@ class TestUtils(unittest.TestCase):
     def test_fact(self):
         self.assertEqual(utils.fact(5), 120)
         self.assertEqual(utils.fact(1), 1)
-        try:
-            self.utils.fact(-1)
-            self.assertTrue(False)
-        except ValueError:
-            self.assertTrue(True)
 
     def test_roots(self):
         self.assertEqual(utils.roots(1,1,1), 0)
+        self.assertEqual(type(utils.roots(1, 1, 1)), tuple)
     
     def test_integrate(self):
         self.assertEqual(utils.integrate(1,1,2), 1)

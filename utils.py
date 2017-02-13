@@ -58,5 +58,5 @@ def integrate(function, lower, upper):
 
 if __name__ == '__main__':
     print(fact(-1))
-    print(roots(1, 0, 1))
+    print(roots(1, 6, 5))
     print(integrate('x ** 2 - 1', -1, 1))

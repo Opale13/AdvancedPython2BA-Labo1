@@ -23,7 +23,7 @@ def integrate(function, lower, upper):
     """Approximates the integral of a fonction between two bounds
     
     Pre: 'function' is a valid Python expression with x as a variable,
-         'lower' <= 'upper',
+         'lower' <== 'upper',
          'function' continuous and integrable between 'lower‘ and 'upper'.
     Post: Returns an approximation of the integral from 'lower' to 'upper'
           of the specified 'function'.

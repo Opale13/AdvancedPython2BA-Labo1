@@ -8,8 +8,6 @@ import jinja2
 import jinja2plugin
 import jinja2tool
 
-ROOT = os.path.abspath(os.getcwd())
-
 class Labo1():
 
     @cherrypy.expose

@@ -21,4 +21,4 @@ if __name__ == '__main__':
     jinja2plugin.Jinja2TemplatePlugin(cherrypy.engine, env=ENV).subscribe()
     cherrypy.tools.template = jinja2tool.Jinja2Tool()
 
-    cherrypy.quickstart(Labo1,'/','serveur.conf')
+    cherrypy.quickstart(Labo1,'','serveur.conf')

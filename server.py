@@ -1,13 +1,24 @@
-# server.py
-# Math tools web application
-# Author: Sébastien Combéfis
-# Version: February 3, 2016
+import json
+import os.path
 
-import os
-from bottle import route, run
+import cherrypy
+from cherrypy.lib.static import serve_file
+import jinja2
 
-@route('/')
-def home():
-    return 'Hello World!'
+import jinja2plugin
+import jinja2tool
 
-run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+ROOT = os.path.abspath(os.getcwd())
+
+class Labo1():
+
+    @cherrypy.expose
+    def index(self):
+        pass
+
+if __name__ == '__main__':
+    ENV = jinja2.Environment(loader=jinja2.FileSystemLoader('.'))
+    jinja2plugin.Jinja2TemplatePlugin(cherrypy.engine, env=ENV).subscribe()
+    cherrypy.tools.template = jinja2tool.Jinja2Tool()
+
+    cherrypy.quickstart(Labo1,'','serveur.conf')

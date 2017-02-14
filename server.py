@@ -14,7 +14,7 @@ class Labo1():
 
     @cherrypy.expose
     def index(self):
-        pass
+        return serve_file (os.path.join(ROOT ,’index.html’))
 
 if __name__ == '__main__':
     ENV = jinja2.Environment(loader=jinja2.FileSystemLoader('.'))

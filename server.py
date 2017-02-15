@@ -21,7 +21,7 @@ class Labo1():
         pass
 
     @cherrypy.expose
-    def factorial(self, number):
+    def Answer_fact(self, number):
         x = utils.fact(number)
 
         return {"number": number, "fact": x}

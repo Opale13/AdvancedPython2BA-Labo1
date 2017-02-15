@@ -30,10 +30,13 @@ def roots(a, b, c):
           to the roots of the ax^2 + bx + c polynomial.
     """
     delta = b*b - 4 * a * c
+
     if delta == 0:
-        return (0)
+        return (0,0)
+
     if delta < 0:
-        return ()
+        return ("None", "None")
+
     if delta > 0:
         x1 = (-b + sqrt(delta))/(2*c)
         x2 = (-b - sqrt(delta))/(2*c)

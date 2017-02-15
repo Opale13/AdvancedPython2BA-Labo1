@@ -8,11 +8,24 @@ import jinja2
 import jinja2plugin
 import jinja2tool
 
+import utils
+
 class Labo1():
 
     @cherrypy.expose
     def index(self):
-        return {"message": "Hello World"}
+        pass
+
+    @cherrypy.expose
+    def fact(self):
+        pass
+
+    @cherrypy.expose
+    def factorial(self, number):
+        x = utils.fact(number)
+
+        return {"number": number, "fact": x}
+
 
 if __name__ == '__main__':
     ENV = jinja2.Environment(loader=jinja2.FileSystemLoader('.'))

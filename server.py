@@ -38,9 +38,9 @@ class Labo1():
     @cherrypy.expose
     def Answer_roots(self, number_a, number_b, number_c):
         try:
-            a = number_a
-            b = number_b
-            c = number_c
+            a = int(number_a)
+            b = int(number_b)
+            c = int(number_c)
 
             x1, x2 = utils.roots(a, b, c)
 

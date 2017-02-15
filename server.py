@@ -22,9 +22,14 @@ class Labo1():
 
     @cherrypy.expose
     def Answer_fact(self, number):
-        x = utils.fact(number)
+        try:
+            nbr = int(number)
+            x = str(utils.fact(nbr))
 
-        return {"number": number, "fact": x}
+            return {"number": number, "fact": x}
+
+        except:
+            return {"number": number, "fact": "None"}
 
 
 if __name__ == '__main__':

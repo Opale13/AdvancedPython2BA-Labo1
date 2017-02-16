@@ -52,6 +52,19 @@ class Labo1():
         except:
             pass
 
+    @cherrypy.expose
+    def integrate(self):
+        pass
+
+    @cherrypy.expose
+    def Answer_integ(self, function, lower, upper):
+        try:
+            a = int(lower)
+            b = int(upper)
+
+            integrate = utils.integrate(function, a, b)
+
+            return {"function": function, "result": integrate}
 
 if __name__ == '__main__':
     ENV = jinja2.Environment(loader=jinja2.FileSystemLoader('.'))

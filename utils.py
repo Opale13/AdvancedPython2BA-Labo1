@@ -38,8 +38,8 @@ def roots(a, b, c):
         return ("None", "None")
 
     if delta > 0:
-        x1 = (-b + sqrt(delta))/(2*c)
-        x2 = (-b - sqrt(delta))/(2*c)
+        x1 = (-b + sqrt(delta))/(2*a)
+        x2 = (-b - sqrt(delta))/(2*a)
         return (x1,x2)
 
 def integrate(function, lower, upper):

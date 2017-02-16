@@ -65,6 +65,8 @@ class Labo1():
             integrate = utils.integrate(function, a, b)
 
             return {"function": function, "result": integrate}
+        except:
+            pass
 
 if __name__ == '__main__':
     ENV = jinja2.Environment(loader=jinja2.FileSystemLoader('.'))

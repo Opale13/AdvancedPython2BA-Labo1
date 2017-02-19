@@ -8,13 +8,17 @@ html,body {
 
 h1{
     text-align: center;
-    color: #224ACB;
+    color: #01072F;
     font-size: 50px;
 }
 
 a{
     color: #202127;
     font-size: 25px;
+}
+
+#title{
+    background-color: #1A4151;
 }
 
 #menu{

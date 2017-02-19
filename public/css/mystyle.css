@@ -1,0 +1,22 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    background-color: #7F8084;
+}
+
+h1{
+    text-align: center;
+    color: #224ACB;
+    font-size: 50px;
+}
+
+a{
+    color: #202127;
+    font-size: 25px;
+}
+
+#menu{
+    text-align: center;
+}

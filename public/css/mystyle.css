@@ -15,10 +15,11 @@ h1{
 a{
     color: #202127;
     font-size: 25px;
+    margin-left: 10px;
 }
 
 #title{
-    background-color: #616AE1;
+    background-color: #B3B3B3;
 }
 
 #menu{

@@ -12,6 +12,10 @@ h1{
     font-size: 50px;
 }
 
+p{
+    font-size: 15px;
+}
+
 a{
     color: #202127;
     font-size: 25px;
@@ -24,4 +28,8 @@ a{
 
 #menu{
     text-align: center;
+}
+
+#enterzone{
+    margin-left: 20px;
 }

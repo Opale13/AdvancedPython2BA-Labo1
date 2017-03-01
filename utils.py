@@ -32,15 +32,15 @@ def roots(a, b, c):
     delta = b*b - 4 * a * c
 
     if delta == 0:
-        return (0,0)
+        return (0,0,0)
 
     if delta < 0:
-        return ("None", "None")
+        return ("None", "None", delta)
 
     if delta > 0:
         x1 = (-b + sqrt(delta))/(2*a)
         x2 = (-b - sqrt(delta))/(2*a)
-        return (x1,x2)
+        return (x1, x2, delta)
 
 def integrate(function, lower, upper):
     """Approximates the integral of a fonction between two bounds

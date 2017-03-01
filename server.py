@@ -42,12 +42,14 @@ class Labo1():
             b = int(number_b)
             c = int(number_c)
 
-            x1, x2 = utils.roots(a, b, c)
+            x1, x2, delta = utils.roots(a, b, c)
 
             root1 = str(x1)
             root2 = str(x2)
+            delta = str(delta)
+            function = str(a) + 'x²+' + str(b) + 'x+' + str(c) + '=0'
 
-            return {"x1": root1, "x2": root2}
+            return {"x1": root1, "x2": root2, "delta": delta, "function": function}
 
         except:
             pass
